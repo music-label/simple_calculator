@@ -7,8 +7,8 @@
 
 .calculator_div {
   background-color: rgb(180, 180, 180);
-  height: 600px;
-  width: 400px;
+  height: 500px;
+  width: 320px;
   border: 1px solid rgb(180, 180, 180);
   border-radius: 20px;
   display: flex;
@@ -20,20 +20,14 @@
   padding-bottom: 18px;
 }
 
-@media (max-width: 500px) {
-  .calculator_div {
-    transform: scale(0.85);
-  }
-}
-
 .calculator_div_night {
   background-color: rgb(0, 0, 0);
   border: 1px solid rgb(0, 0, 0);
 }
 
 .input {
-  width: 360px;
-  height: 80px;
+  width: 280px;
+  height: 60px;
   border: 1px solid white;
   border-radius: 20px;
   font-size: 50px;
@@ -43,23 +37,23 @@
 .clear,
 .ravno {
   background-color: white;
-  width: 80px;
-  height: 80px;
+  width: 62px;
+  height: 62px;
   border: 1px solid;
   border-radius: 20px;
   border-color: white;
-  font-size: 50px;
+  font-size: 40px;
   transition: 0.4s;
 }
 
 .symbol,
 .krapka {
-  width: 61px;
-  height: 61px;
+  width: 47px;
+  height: 47px;
   background-color: rgb(255, 242, 170);
   border: 1px solid rgb(255, 242, 170);
   border-radius: 20px;
-  font-size: 50px;
+  font-size: 40px;
   transition: 0.4s;
 }
 
@@ -83,11 +77,11 @@
 }
 
 .clear_all {
-  width: 160px;
+  width: 104px;
   height: 48px;
   border: 1px solid white;
   border-radius: 20px;
-  font-size: 26px;
+  font-size: 22px;
   background-color: white;
   transition: 0.4s;
 }
@@ -98,11 +92,11 @@
 }
 
 .history {
-  width: 120px;
+  width: 104px;
   height: 48px;
   border: 1px solid rgb(246, 212, 241);
   border-radius: 20px;
-  font-size: 26px;
+  font-size: 24px;
   background-color: rgb(246, 212, 241);
   transition: 0.4s;
 }
