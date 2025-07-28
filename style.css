@@ -7,8 +7,9 @@
 
 .calculator_div {
   background-color: rgb(180, 180, 180);
-  height: 600px;
-  width: 400px;
+  max-width: 400px;
+  height: auto;
+  width: 90%;
   border: 1px solid rgb(180, 180, 180);
   border-radius: 20px;
   display: flex;
