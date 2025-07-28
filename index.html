@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Script</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <div class="main_div">
+      <div id="calculator_div" class="calculator_div">
+        <input class="input" type="text" />
+        <button class="number">0</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="clear">C</button>
+        <button class="ravno">=</button>
+        <button class="symbol">+</button>
+        <button id="minus" class="symbol">-</button>
+        <button class="symbol">*</button>
+        <button class="symbol">/</button>
+        <button id="krapka" class="krapka">.</button>
+        <button class="clear_all">Clear All</button>
+        <button class="history">History</button>
+        <button id="tema" class="tema">&#9680;</button>
+        <div id="history_div" class="history_div">
+          <button class="close_modal">X</button>
+          <ul class="ul"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@12.4.1/lib/browser/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
