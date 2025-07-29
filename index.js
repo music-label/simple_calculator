@@ -53,30 +53,32 @@ function clr() {
   input.value = input.value.slice(0, -1);
 }
 
+const max_value_history = 8;
+
 function ranvo() {
-  if (input.value === "") {
-    input.value = "";
+  if (input.value === "") return;
+  const vall = input.value;
+  const vva = math.evaluate(input.value);
+  if (!Number.isInteger(vva)) {
+    input.value = vva.toFixed(2);
+    const li = document.createElement("li");
+    li.style.color = "white";
+    li.textContent = vall + " = " + vva.toFixed(2);
+    li.classList.add("list_history");
+    ul.appendChild(li);
   } else {
-    const vall = input.value;
-    const vva = math.evaluate(input.value);
-    if (!Number.isInteger(vva)) {
-      input.value = vva.toFixed(2);
-      const li = document.createElement("li");
-      li.style.color = "white";
-      li.textContent = vall + " = " + vva.toFixed(2);
-      li.classList.add("list_history");
-      ul.appendChild(li);
-      localStorage.setItem("value_history", ul.innerHTML);
-    } else {
-      const get_history = localStorage.getItem("value_history");
-      input.value = vva;
-      const li = document.createElement("li");
-      li.textContent = vall + " = " + vva;
-      li.classList.add("list_history");
-      ul.appendChild(li);
-      localStorage.setItem("value_history", ul.innerHTML);
-    }
+    const get_history = localStorage.getItem("value_history");
+    input.value = vva;
+    const li = document.createElement("li");
+    li.textContent = vall + " = " + vva;
+    li.classList.add("list_history");
+    ul.appendChild(li);
   }
+
+  while (ul.children.length > max_value_history) {
+    ul.removeChild(ul.firstChild);
+  }
+  localStorage.setItem("value_history", ul.innerHTML);
 }
 //FUNCTION
 
