@@ -128,8 +128,8 @@
 }
 
 .history_display {
-  max-height: 500px;
-  max-width: 320px;
+  height: 500px;
+  width: 320px;
   background-color: rgb(0, 0, 0);
   opacity: 0.8;
   position: absolute;
