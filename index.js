@@ -53,10 +53,12 @@ function clr() {
   input.value = input.value.slice(0, -1);
 }
 
-const max_value_history = 8;
+const max_value_history = 7;
 
 function ranvo() {
-  if (input.value === "") return;
+  if (input.value === "" || !/[+\-*/]/.test(input.value)) {
+    return;
+  }
   const vall = input.value;
   const vva = math.evaluate(input.value);
   if (!Number.isInteger(vva)) {
