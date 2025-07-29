@@ -82,29 +82,38 @@ function ranvo() {
   }
   localStorage.setItem("value_history", ul.innerHTML);
 }
+
+function scroll_input() {
+  input.scrollLeft = input.scrollWidth;
+}
 //FUNCTION
 
 //EVENTS
+
 document.querySelectorAll(".number").forEach((value) => {
   value.addEventListener("click", () => {
     input.value += value.textContent;
+    scroll_input();
   });
 });
 
 document.querySelectorAll(".symbol").forEach((value) => {
   value.addEventListener("click", () => {
     symbol_mouse(value);
+    scroll_input();
   });
 });
 
 minus.addEventListener("click", () => {
   if (input.value === "") {
     input.value += minus.textContent;
+    scroll_input();
   }
 });
 
 krapka.addEventListener("click", () => {
   krap();
+  scroll_input();
 });
 
 clear.addEventListener("click", () => {
@@ -117,6 +126,7 @@ clear_all.addEventListener("click", () => {
 
 ravno.addEventListener("click", () => {
   ranvo();
+  scroll_input();
 });
 
 document.addEventListener("keydown", (event) => {
@@ -126,10 +136,13 @@ document.addEventListener("keydown", (event) => {
     clr();
   } else if ("1234567890".includes(event.key)) {
     input.value += event.key;
+    scroll_input();
   } else if (event.key === ".") {
     krap();
+    scroll_input();
   } else if ("+-*/.".includes(event.key)) {
     symbol_keyboard(event.key);
+    scroll_input();
   }
 });
 
